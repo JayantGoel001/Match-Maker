@@ -19,6 +19,13 @@ rd.shuffle(button_symbol)
 for i in button_symbol:
     rd.shuffle(i)
 
-print(button_symbol)
+buttons = {}
+for i in range(4):
+    for j in range(6):
+        button = Button(width=12, height=8)
+        button.grid(row=i, column=j)
+        buttons[i, j] = button
+
+
 
 win.mainloop()
